@@ -1,10 +1,6 @@
-/* eslint-disable linebreak-style */
-const getListStudentIds = (listStudents) => {
-  if (Array.isArray(listStudents) === false) {
+export default function getListStudentIds(studentArray) {
+  if (!Array.isArray(studentArray)) {
     return [];
   }
-
-  return listStudents.map((x) => x.id);
-};
-
-export default getListStudentIds;
+  return studentArray.map((item) => item.id);
+}

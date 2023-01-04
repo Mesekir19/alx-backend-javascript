@@ -1,11 +1,12 @@
-export default function cleanSet (_set, startString) {
-  if (typeof _set !== 'object') return '';
-  if (typeof startString !== 'string') return '';
-  if (startString.length === 0) return '';
-
-  const stringSet = [];
-  [..._set].forEach((x) => {
-    if (x && x.indexOf(startString) === 0) stringSet.push(x.replace(startString, ''));
+export default function cleanSet(set, startString) {
+  let res = '';
+  if (!startString || !startString.length) {
+    return res;
+  }
+  set.forEach((element) => {
+    if (element && element.startsWith(startString)) {
+      res += `${element.slice(startString.length)}-`;
+    }
   });
-  return stringSet.join('-');
+  return res.slice(0, res.length - 1);
 }

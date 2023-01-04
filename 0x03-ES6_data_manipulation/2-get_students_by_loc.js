@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
-const getStudentsByLocation = (students, city) => students.filter((s) => s.location === city);
-
-export default getStudentsByLocation;
+export default function getStudentsByLocation(array, city) {
+  return array.filter((item) => item.location === city);
+}

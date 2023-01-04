@@ -1,13 +1,12 @@
-/* eslint-disable linebreak-style */
-
-const createInt8TypedArray = (length, position, value) => {
-  if (position >= length) throw Error('Position outside range');
-
+export default function createInt8TypedArray(length, position, value) {
   const buffer = new ArrayBuffer(length);
-  const int8 = new Int8Array(buffer, 0, length);
-  int8.set([value], position);
+  const view = new DataView(buffer, 0);
 
-  return new DataView(buffer);
-};
-
-export default createInt8TypedArray;
+  if (position > length - 1) {
+    // throws an error if adding the value is not possible
+    throw Error('Position outside range');
+  } else {
+    view.setInt8(position, value);
+  }
+  return view;
+}
