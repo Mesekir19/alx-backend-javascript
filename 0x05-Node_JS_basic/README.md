@@ -138,6 +138,6 @@ module.exports = {
 ```
 
 ## :pencil: **Author**
-### :man: Yidnekachew Bantrga
-- [Github](https://github.com/Yidne21)
-- [Linkedin](https://www.linkedin.com/in/yidnekachew-bantrga-801376234/)
+### :man: Mesekir Getachew
+- [Github](https://github.com/Mesekir10)
+- [Linkedin](https://www.linkedin.com/in/mesekir-sahilu-b93a23199/)
